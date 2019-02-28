@@ -6,7 +6,7 @@ REPOSITORY  := library/pgsimilarity
 REGISTRY    := docker.52north.org
 PGSIMILARITY_REPOSITORY := eulerto/pg_similarity
 VERSION_LEVEL := minor
-BUILD_FLAGS   += --license "GPLv2" --pull --no-branch --no-commit --repository $(REPOSITORY)
+BUILD_FLAGS   += --license "GPLv2" --push --pull --no-branch --no-commit --repository $(REPOSITORY)
 BUILD_FLAGS   += --url https://github.com/$(PGSIMILARITY_REPOSITORY) --version-level $(VERSION_LEVEL)
 BUILD_FLAGS   += -b PGSIMILARITY_REPOSITORY=$(PGSIMILARITY_REPOSITORY) -b PGSIMILARITY_VERSION=master
 DOCKER        := $(shell which docker)
