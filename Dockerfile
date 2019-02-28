@@ -8,7 +8,6 @@ ARG PGSIMILARITY_REPOSITORY=eulerto/pg_similarity
 
 RUN  set -ex \
   && SRCDIR=/usr/src/pg_similarity \
-  && BRANCH=master \
   && apk add --no-cache --virtual .deps curl tar gcc make musl-dev\
   && mkdir -p "${SRCDIR}" \
   && curl -sL "https://github.com/${PGSIMILARITY_REPOSITORY}/archive/${PGSIMILARITY_VERSION}.tar.gz" \
